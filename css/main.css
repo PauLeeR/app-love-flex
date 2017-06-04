@@ -7,7 +7,7 @@ body {
 }
 
 /*Contenedor flexbox*/
-.flex-container{
+.flex-container{   /*todas las secciones que tienen esta clase tendrán el comportamiento de un contenedor flex-box*/
 	display: flex;
 }
 
@@ -20,13 +20,20 @@ body {
 	width: 100%;
 }
 
+.link{
+	font-weight: 700;
+	padding: 21px;
+	display: inline-block;
+	text-decoration: none;
+}
+
 .menu.flex-container{
-	justify-content: flex-start;
+	justify-content: flex-start; /*con esto, los elementos del menú (barra de nav) se van a alinear a la izquierda de la pantalla*/
 }
 
 .logo-container{
-	margin-left: auto;
-	margin-right: 20px;
+	margin-left: auto; /*con esto el logo se alinea automática y mágicamente a la derecha de nuestra pantalla*/
+	margin-right: 20px; /*para que no quede totalmente pegado a la derecha de la pantalla le damos un poco de margen a la derecha*/
 }
 
 .flex-container .logo{
@@ -43,9 +50,9 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	justify-content: center; /*con el valor center, los elementos se posicionan en el centro de la sección*/
+	align-items: center;     /*con el valor center, los elementos se posicionan en el centro de la sección*/
+	flex-direction: column; /*los elementos de esta sección se desplegarán de manera vertical hacia abajo*/
 	color: whitesmoke;
 }
 
@@ -74,8 +81,8 @@ body {
 }
 
 #services.flex-container{
-	justify-content: space-around;
-	flex-wrap: wrap;
+	justify-content: space-around;/*este valor permite que los elementos de esta sección se distribuyan dentro de la pantalla dejando un espacio a cada lado*/ 
+	flex-wrap: wrap; /*con este valor, los elementos de esta sección no se despliegan en una sola línea*/
 }
 
 .text-services{
@@ -95,21 +102,53 @@ body {
 	margin-bottom: 20px;
 }
 
+#work{
+	margin-top: 10px;
+	text-align: center;
+	padding: 50px 15px;
+	font-weight: 400px;
+}
+
+h4.work-pa{
+	padding: 20px;
+	text-align: center;
+	width: 60%;
+	margin:0 auto;
+}
+.work.flex-container{
+	flex-direction: column;/*muestra todos los elementos dentro de la sección work en forma de columna*/
+}
+
+.gallery img{
+	max-width: 100%;
+}
+
+.gallery.flex-container{
+	flex-wrap: wrap;
+	justify-content: space-around; /*deja el mismo espacio entre los elementos (imágenes) en la pantalla*/
+	text-align: center; /*y los alinea al centro de la pantalla*/
+}
+
+.pic-container{
+	width: 400px;
+	height: 400px;
+}
+
 footer{
-  text-align: center;
-  height: 70px;
-  background-color: #373b47;
-  color: white;
-  padding-top: 17px;
+	text-align: center;
+	height: 70px;
+	background-color: #373b47;
+	color: white;
+	padding-top: 17px;
 }
 
 i{
-	color: red;
+	color: red;  /*estilos al ícono del footer*/
 	margin-left: 10px;
 	margin-right: 10px;
 }
 .pauli{
-	color: violet;
+	color: violet; /*estilos al span (del footer) de la estudiante de Laboratoria, o sea yo*/
 	font-size: 20px;
 	font-weight: 800px;
 	margin-left: 2px;
